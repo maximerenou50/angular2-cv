@@ -1,0 +1,76 @@
+<h1>My hobbies</h1>
+<p>On this page, I will talk about my hobbies, what I like to do besides work.</p>
+
+<h2>New technologies</h2>
+<p>I'm not working in computer science without reason, I like new technologies related to science. I like to see how the world is changing and to know I can be part of it. </p>
+<p>Some science project I'm interrest of:</p>
+<h3>Solar Impulse</h3>
+<div class="row">
+	<div class="col-md-5">
+		<img class="img-responsive" src="/images/solar_impulse.jpg" alt="hyperloop" />
+	</div>
+	<div class="col-md-7">
+		<p>Solar Impulse is a solar airplane project launched by <em>Bertrand Piccard</em> and <em>André Borschberg</em>. The purpose of this project is to build and to fly a plane (day and night) powered only by solar energy, and to perform a world tour. This challenge is scientific and technologic ; if Solar Impulse succeed it journey around the world, it will be a big step forward for solar energy. This project is especially important nowadays where finding new energy has become critical.</p>
+	</div>
+</div>
+<h3>Hyperloop</h3>
+<div class="row">
+	<div class="col-md-5">
+		<img class="img-responsive" src="/images/hyperloop.jpg" alt="hyperloop" />
+	</div>
+	<div class="col-md-7">
+		<p>Hyperloop is a transportation project launched by <em>Elon Musk</em> (CEO of Tesla Motors) to be the fifth way of moving, after planes, trains, boats and cars. The idea is to move some capsules in low pressure tubes. The tubes will have solar panels on them so they will be self-powered. This new way of moving will be faster (up to 760 mph) and better for environment than airplanes. It might also be cheaper than train (Elon Musk said the cost to Hyperloop between San Francisco and Los Angeles will be 6 billions against the 60 billions for the <em>California High-Speed Rail</em>).</p>
+		<p>What I like about this project is the futurist part but also the realistic part. This kind of projects might revolutionized the way of moving, which make easier traveling.</p>
+	</div>
+</div>
+
+<h2>Travel</h2>
+<p>I like to travel around the world and to discover new cultures. It helps me to keep an open mind and there so much to see. That also a reason why I wanted to live in London, to share my French experiences and to learn new ones.</p>
+<p>Currently, I already traveled to:</p>
+<ul>
+	<li>France (of course),</li>
+	<li>England,</li>
+	<li>Spain,</li>
+	<li>Italy,</li>
+	<li>Germany,</li>
+	<li>Belgium,</li>
+	<li>Martinique,</li>
+	<li>Dominican Republic</li>
+</ul>
+<p>But they are a lots of country I would like to go:</p>
+<ul>
+	<li>USA,</li>
+	<li>Canada,</li>
+	<li>Australia,</li>
+	<li>Ireland,</li>
+	<li>Thailand,</li>
+	<li>Kenya,</li>
+	<li>Greenland</li>
+</ul>
+<p>And more!</p>
+
+<h2>Music</h2>
+<p>I like music since a long time now, I always liked to listen music and I wanted to learn to play. I chose the guitar because I loved the song and it's possible to learn alone. I'm playing the guitar since 2013, I started by myself for a year and a half, then I choose to continu with a teacher to learn more. I started with a cheap electric guitar, then I bought an accoustic guitar to try something new and finally I bought a better electric guitar (Les Paul by Gibson). In addition to playing music, I love to see my favorite bands during concerts or festivals.</p>
+<p>Let me introduced some uniques songs I espacially like:</p>
+
+<h3>Igor Presnyakov</h3>
+<p>Igor Presnyakov is a Russian guitar player known for his song covers. You can learn more about him on his website <a href="http://www.igorpresnyakov.com/" target="_blank">http://www.igorpresnyakov.com</a>. Check out this video of Igor Presnyakov playing his interpretation of <em>Fade to black by Metallica</em>.</p>
+<button (click)="showVideo1()" class="btn btn-primary ">{{video1Text}}</button>
+
+<div *ngIf="video1">
+	<div class="small-separator"></div>
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe class="embed-responsive-item" src="//www.youtube.com/embed/OFBuWtcfDiM?rel=0" allowfullscreen=""></iframe>
+	</div>
+</div>
+
+<h3>Apocalyptica</h3>
+<p>Apocalyptica is a Finnish band playing a very particular style of music, between metal and classic. The band is composed of three cellists and a drummer. I had the chance to see them on summer 2016 and I really loved the show. This video is a also a cover of <em>Metallica</em> called <em>Battery</em> (as you may see, there is a fourth cellists in this video, it's Antero Manninen an old member of the band).</p>
+<button (click)="showVideo2()" class="btn btn-primary ">{{video2Text}}</button>
+
+<div *ngIf="video2">
+	<div class="small-separator"></div>
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe class="embed-responsive-item" src="//www.youtube.com/embed/PZFl0gQLz2k?rel=0" allowfullscreen=""></iframe>
+	</div>
+</div>

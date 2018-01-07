@@ -1,0 +1,242 @@
+/* Menu link */
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-default {
+    background-color: #2D97EF;
+    border-color: #e7e7e7;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.97);
+}
+
+.navbar-default .navbar-nav>li.active{
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 1px;
+    border-color: #e7e7e7;
+}
+
+.navbar-default .active {
+    color: #000000;
+}
+
+/* Menu button */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFFFFF;
+}
+.navbar-default .navbar-toggle {
+    border-color: #FFFFFF;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    border-color: #000000;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #000000;
+}
+
+/* Menu brand */
+.navbar-brand {
+    padding-top: 5px;
+}
+
+.navbar-home{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* Callapse panel */
+
+.panel-heading {
+    padding: 0;
+    border: none;
+}
+
+.panel-heading .btn-primary {
+    color: #FFFFFF;
+    background-color: #2D97EF;
+    border: none;
+    width: 100%;
+    height: 50px;
+}
+
+.panel-heading .btn-primary h3{
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+/* Progress bar */
+.progress {
+    height: 15px;
+    width: 90%;
+}
+.progress-bar {
+    line-height: 17px;
+    background-color: #2D97EF;
+}
+
+/* Google Map */
+.sebm-google-map-container {
+    width: 100%;
+    height: 550px;
+}
+
+/* Custom */
+.span-link {
+    color: #2D97EF;
+}
+.span-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4{
+    color: #2D97EF;
+}
+
+#navbar-custom {
+    min-height: 200px;
+    width: 100%;
+    background-color: #2D97EF;
+    padding-top: 10px;
+}
+#navbar-custom h1,
+#navbar-custom h3 {
+    color: #FFFFFF;
+}
+#navbar-name-job{
+    padding-top: 20px;
+    height: 100%;
+}
+
+#profile_picture {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 120px;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+/* Menu button */
+#menu-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    background-color: #2D97EF;
+    padding: 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,.2);
+    border: none;
+}
+
+#menu-toggle:active {
+    box-shadow: 0 6px 12px rgba(0,0,0,.4);
+}
+
+#menu-toogle-img {
+    height: 30px;
+    margin-top: 13px;
+}
+
+.separator-white {
+    border-bottom: 1px solid #FFFFFF;
+    margin-top: 10px;
+}
+
+#sidebar-wrapper li {
+    color: #FFFFFF;
+}
+#sidebar-wrapper li.sidebar-nav-name {
+    font-size: 30px;
+}
+#sidebar-wrapper li.sidebar-nav-job {
+    font-size: 20px;
+}
+
+.justify {
+    text-align: justify;
+}
+
+/* my-cv */
+h4 {
+    font-weight: bold;
+}
+h5 {
+    text-decoration: underline;
+}
+
+.experience {
+    margin-bottom: 20px;
+}
+
+.experience-kind {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.experience-kind ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-kind li { 
+    padding-right: 16px; 
+}
+
+.experience-kind li:after {
+    content: url('/images/triangle.png');
+    padding-left: 8px;
+}
+
+.collapsed .experience-kind li:after {
+    content: url('/images/triangle_right.png');
+    padding-left: 8px;
+}
+
+.small-separator {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.g-recaptcha {
+    margin-bottom: 10px;
+}
+
+.ng-valid {
+    border-left: 5px solid #42A948;
+}
+
+.ng-touched.ng-invalid {
+    border-left: 5px solid #a94442;
+}
+
+p, li{
+    text-align: justify;
+}

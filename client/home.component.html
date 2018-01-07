@@ -1,0 +1,23 @@
+<h1>Welcome</h1>
+<p>Hello and welcome on my personal website. This website purpose is to explain my course and to show what I can do.</p>
+
+<h3>Who am I?</h3>
+<p>My name is Maxime Renou, I was born the 8th november 1990 and I'm a French software engineer.</p>
+
+<h3>Where do I come from?</h3>
+<p class="text-justify">
+    I'm born in <span class="span-link" (click)="showPlace(0)">Cherbourg</span> where I spent my childhood. After my BTEC National Diploma, I went to <span class="span-link" (click)="showPlace(1)">Caen</span> to study computer science during three years and I finished my study in <span class="span-link" (click)="showPlace(2)">Rennes</span>, where I'm working since. Now I wanna live to <span class="span-link" (click)="showPlace(3)">London</span> because I have fallen in love with this city and I would like to work in an anglophone country.
+</p>
+<sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+	<sebm-google-map-marker *ngFor="let p of places" [latitude]="p.lat" [longitude]="p.lng" [label]="p.label">
+		<sebm-google-map-info-window>
+          {{p.description}}
+        </sebm-google-map-info-window>
+	</sebm-google-map-marker>
+</sebm-google-map>
+
+<h3>What I'm looking for?</h3>
+<p>Web technologies made me love computer science, so I'm looking for a job where I will work with them. I'm also looking for a company where I will feel good, where people are respectful and like to work together.</p>
+
+<h3>What else?</h3>
+<p>Check out the other pages of my website and let me know if you like it.</p>

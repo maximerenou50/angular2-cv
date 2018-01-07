@@ -1,0 +1,7 @@
+{
+	"galaxy.meteor.com": {
+		"env": {
+			"MONGO_URL" : "mongodb://maxime.renou:******@ds011883.mlab.com:11883/my-cv"
+		}
+	}
+}

@@ -1,0 +1,125 @@
+<h1>About this website</h1>
+<p>On this page, I will explain how I built my website and what technologies I chose.</p>
+
+<h2>Technologies</h2>
+<p>Here is the technologies I used to build my website:</p>
+<ul>
+	<li><a href="https://angular.io/" target="_blank"><strong>Angular 2</strong></a>: Angular is the famous JavaScript framework of Google. I use the lastest version to manage my application. You can choose to build it with JavaScript or TypeScript. TypeScript is a object-oriented programming language developed by Microsoft and a superset of JavaScript, that what I chose for my website.</li>
+	<li><a href="http://www.angular-meteor.com/" target="_blank"><strong>Meteor</strong></a>: Meteor (more specifically <em>Angular Meteor</em>) is a framework which let you manage both client and server side using Angular. It also offer an access to MongoDB and a lot of functionalities.</li>
+	<li><a href="https://getbootstrap.com/" target="_blank"><strong>Bootstrap</strong></a>: Bootstrap is the most famous CSS framework built by twitter. It's easy to make a nice web app with it but you have to override the default design to look different from other websites.</li>
+	<li><a href="https://www.mongodb.com/" target="_blank"><strong>MongoDB</strong></a>: MongoDB is a NoSQL database, document-oriented. I was looking for a NoSQL database, because I was searching simplicity and flexibilty, and I was looking for a document-oriented database because my app manage complex type and this kind of NoSQL was the more appropriate for my app.</li>
+</ul>
+
+<h2>Hosting</h2>
+<p>To host my application, I used:</p>
+<ul>
+	<li><a href="https://www.meteor.com/hosting" target="_blank"><strong>Galaxy</strong></a>: Galaxy is the platform as a service for Meteor applications. This service is host on AWS and use Docker to deploy apps. I used this service because of its simplicity, it's very easy to deploy an app with it and I was looking for a PaaS to host my application.</li>
+	<li><a href="https://mlab.com/" target="_blank"><strong>mLab</strong></a>: mLab is a database as a service for MongoDB. It's also hosted on AWS and has a free offer for small application such as mine.</li>
+	<li><a href="https://www.1and1.com/" target="_blank"><strong>1&amp;1</strong></a>: 1&amp;1 is an hosting, a domain registration and a website services. I only used the domain registration to buy <em>maximerenou50.com</em> and I used their SMTP service to send me email through the contact form.</li>
+</ul>
+
+<h2>Version control system</h2>
+<p>I choose to use <a href="https://git-scm.com/" target="_blank"><strong>Git</strong></a> to manage my commits and to save my work. I wanted a private repository so I choose <a href="https://www.assembla.com/" target="_blank"><strong>Assembla</strong></a> to that. It offer private repository for SVN and Git. Here is how my Git repository looks like:</p>
+<a href="/images/git.png"><img class="img-responsive" alt="Git repo" src="/images/git.png"></a>
+
+<h2>Responsive design</h2>
+<p>My web application is fully responsive and works on computers, tablets and smartphones thanks to Bootstrap. Because I worked with mobile technologies before, I make sure my app will work on all devices, not just computers. I'm also concern about cross-mobile issues and that another reason why I love Meteor.</p>
+
+<h2>My data</h2>
+<p>As I said, I used MongoDB to store my application data. Here is an <u>extract</u> from my Database:</p>
+<pre>
+{
+    "_id": "bMswxqodSfZsAW7aL",
+    "firstname": "Maxime",
+    "lastname": "Renou",
+    "birth": "1990,11,08",
+    "job": "Software engineer",
+    "skills": [
+        {
+            "type": "language",
+            "name": "HTML",
+            "level": 9
+        },
+        {
+            "type": "framwork",
+            "name": "Angular",
+            "level": 6
+        },
+        {
+            "type": "software",
+            "name": "IntelliJ",
+            "level": 8
+        },
+        {
+            "type": "tool",
+            "name": "SVN",
+            "level": 9
+        },
+        {
+            "type": "methodology",
+            "name": "Scrum",
+            "level": 8
+        }
+    ],
+    "experiences": {
+        "professional": [
+            {
+                "startDate": "2014,09,01",
+                "endDate": "2016,09,01",
+                "company": "SopraSteria",
+                "customer": "Orange",
+                "title": "Software engineer in OPAL activation project",
+                "assignments": [
+                    "OPAL is the activation project of Orange (French first telephone operator). This project involves maintaining and developing all build center applications.",
+                    "Development of new features on several applications.",
+                    "Involvement in project industrialisation through continuous delivery.",
+                    "Management of a technical tools allowing to test information system applications.",
+                    "Realisation of costing.",
+                    "Involvement in developing skills of new employees on the project."
+                ],
+                "skills": [
+                    "KPSA",
+                    "Java",
+                    "J2EE",
+                    "Shell",
+                    "SQL",
+                    "HPQC",
+                    "SQLDevelopper",
+                    "IntelliJ",
+                    "SoapUI",
+                    "Jenkins",
+                    "Maven",
+                    "Ant",
+                    "Phabricator",
+                    "SVN",
+                    "Scrum",
+                    "eXtreme Programming",
+                    "Windows",
+                    "Unix"
+                ]
+            }
+        ]
+    },
+    "trainings": [
+        {
+            "year": 2014,
+            "title": "Master's degree in information technology (block-release training), specialty in software engineering",
+            "place": "University of Rennes 1, France"
+        }
+    ],
+    "languages": [
+        {
+            "name": "French",
+            "level": 10
+        }
+    ]
+}
+</pre>
+<p>MongoDB is a document-oriented database, this is one document and it's represent one user, in this case it's me. Since I'm pretty lonely on my website, there is only one document on my database and of course it seems useless to have a database. But it will be so easy to transform this personal website to a generic website: I'll just have to load a different document for each users of my service.</p>
+
+<h2>What's next?</h2>
+<p>Since a project is never over, I planned some improvements, such as:</p>
+<ul>
+	<li>An administration interface to update my CV. Currently, data from my CV are initialized from the application, but I can't update then through a GUI. To do that, I will have to manage users and to restricted access to some pages. I will be able to do that thanks to Meteor which provides solutions for that.</li>
+	<li>Deploy an Android app with PhoneGap. Meteor provides solutions to deploy apps over Android and iOS.</li>
+</ul>

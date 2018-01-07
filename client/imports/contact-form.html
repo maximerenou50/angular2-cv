@@ -1,0 +1,25 @@
+<div [hidden]="!submitted" class="alert alert-success" role="alert">
+  <p class="alert-link">Thank you, I will come back to you shortly</p>
+</div>
+<form [hidden]="submitted" id="contact-form" [ngFormModel]="contactForm" #f="ngForm" (submit)="sendEmail(f.value)" (keyup)="isValid()" class="contact-form">
+	<div class="form-group">
+		<label for="contact-email">Email address</label>
+		<input type="email" class="form-control" id="contact-email" placeholder="Email" ngControl="email">
+	</div>
+	<div class="form-group">
+		<label for="contact-Title">Title</label>
+		<input type="text" class="form-control" id="contact-Title" placeholder="Title" ngControl="title">
+	</div>
+	<div class="form-group">
+		<label for="contact-content">Content</label>
+		<textarea class="form-control" id="contact-content" rows="8" ngControl="content"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="recaptcha">Are you a robot?</label>
+		<div class="g-recaptcha" id="recaptcha" data-callback="verifyCallback" data-sitekey="6LcTHyETAAAAAKtkh1uUm8grXhWwDVHa2FxMLvdm"></div>
+	</div>
+	<div [hidden]="recaptchaUnvalidHidden" class="alert alert-danger" role="alert">
+	  <p class="alert-link">Captchat not valid!</p>
+	</div>
+	<button [disabled]="submitButtonDisabled" type="submit" class="btn btn-default" >Send</button>
+</form>

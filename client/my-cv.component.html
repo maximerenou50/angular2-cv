@@ -1,0 +1,255 @@
+<div *ngFor="let user of users">
+	<div *ngIf="user?.firstname">
+		<h1>My CV</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a data-toggle="collapse" class="btn btn-primary" role="button" href="#collapseExperiences" aria-expanded="true" aria-controls="collapseExperiences">
+							<h3>My experiences</h3>
+						</a>
+					</div>
+					<div class="panel-body">
+						<div class="collapse in" id="collapseExperiences">
+
+							<a data-toggle="collapse" href="#collapseProfessionalExperiences" aria-expanded="true" aria-controls="collapseProfessionalExperiences">
+								<h3 class="experience-kind"><ul><li>Professional</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapseProfessionalExperiences">
+								<div class="small-separator"></div>
+							    <div *ngFor="let experience of user.experiences.professional" class="experience">
+									<h4>{{experience.title}}</h4>
+									<p>From {{stringAsDate(experience.startDate) | date:"MMM y"}} to {{stringAsDate(experience.endDate) | date:"MMM y"}} - Working at <strong>{{experience.company}}</strong> for <strong>{{experience.customer}}</strong></p>
+									<h5>My assignments</h5>
+									<ul>
+										<li *ngFor="let assignment of experience.assignments" class="justify"> {{assignment}} </li>
+									</ul>
+									<h5>Technical environment</h5>
+									<span *ngFor="let skill of experience.skills; let isLast=last">
+										{{skill}}{{isLast ? '.' : ', '}}
+									</span>
+								</div>
+							</div>
+						
+							<div class="small-separator"></div>
+							<a data-toggle="collapse" href="#collapseSchoolExperiences" aria-expanded="true" aria-controls="collapseSchoolExperiences">
+								<h3 class="experience-kind"><ul><li>School</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapseSchoolExperiences">
+							    <div *ngFor="let experience of user.experiences.school" class="experience">
+									<h4>{{experience.title}}</h4>
+									<p>{{experience.startYear}} <span *ngIf="experience?.endYear"> - {{experience.endYear}}</span></p>
+									<a *ngIf="experience?.link" href="{{experience.link}}" target="_blank">{{experience.link}}</a>
+									<h5>My assignments</h5>
+									<ul>
+										<li *ngFor="let assignment of experience.assignments" class="justify"> {{assignment}} </li>
+									</ul>
+									<h5>Technical environment</h5>
+									<span *ngFor="let skill of experience.skills; let isLast=last">
+										{{skill}}{{isLast ? '.' : ', '}}
+									</span>
+								</div>
+							</div>
+
+							<div class="small-separator"></div>
+							<a data-toggle="collapse" href="#collapsePersonalExperiences" aria-expanded="true" aria-controls="collapsePersonalExperiences">
+								<h3 class="experience-kind"><ul><li>Personal</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapsePersonalExperiences">
+							    <div *ngFor="let experience of user.experiences.personal" class="experience">
+									<h4>{{experience.title}}</h4>
+									<p>{{experience.startYear}} <span *ngIf="experience?.endYear"> - {{experience.endYear}}</span></p>
+									<a *ngIf="experience?.link" href="{{experience.link}}" target="_blank">{{experience.link}}</a>
+									<h5>My assignments</h5>
+									<ul>
+										<li *ngFor="let assignment of experience.assignments" class="justify"> {{assignment}} </li>
+									</ul>
+									<h5>Technical environment</h5>
+									<span *ngFor="let skill of experience.skills; let isLast=last">
+										{{skill}}{{isLast ? '.' : ', '}}
+									</span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a data-toggle="collapse" class="btn btn-primary" role="button" href="#collapseSkills" aria-expanded="true" aria-controls="collapseSkills">
+							<h3>My skills</h3>
+						</a>
+					</div>
+					<div class="panel-body">
+						<div class="collapse in" id="collapseSkills">
+
+							<a data-toggle="collapse" href="#collapseLanguages" aria-expanded="true" aria-controls="collapseLanguages">
+								<h3 class="experience-kind"><ul><li>Languages</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapseLanguages">
+								<div class="small-separator"></div>
+							    <div *ngFor="let skill of user.skills">
+							    	<div *ngIf="skill.type=='language'">
+										<p class="text-capitalize">{{skill.name}}</p>
+										<span title="{{skill.level}}/10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" [ngStyle]="setWidth(skill.level)">
+												{{skill.level}}/10
+												</div>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="small-separator"></div>
+							<a data-toggle="collapse" href="#collapseFrameworks" aria-expanded="true" aria-controls="collapseFrameworks">
+								<h3 class="experience-kind"><ul><li>Frameworks</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapseFrameworks">
+								<div class="small-separator"></div>
+							    <div *ngFor="let skill of user.skills">
+							    	<div *ngIf="skill.type=='framwork'">
+										<p class="text-capitalize">{{skill.name}}</p>
+										<span title="{{skill.level}}/10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" [ngStyle]="setWidth(skill.level)">
+												{{skill.level}}/10
+												</div>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="small-separator"></div>
+							<a data-toggle="collapse" href="#collapseSoftwares" aria-expanded="true" aria-controls="collapseSoftwares">
+								<h3 class="experience-kind"><ul><li>Software</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapseSoftwares">
+								<div class="small-separator"></div>
+							    <div *ngFor="let skill of user.skills">
+							    	<div *ngIf="skill.type=='software'">
+										<p class="text-capitalize">{{skill.name}}</p>
+										<span title="{{skill.level}}/10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" [ngStyle]="setWidth(skill.level)">
+												{{skill.level}}/10
+												</div>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="small-separator"></div>
+							<a data-toggle="collapse" href="#collapseTools" aria-expanded="true" aria-controls="collapseTools">
+								<h3 class="experience-kind"><ul><li>Tools</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapseTools">
+								<div class="small-separator"></div>
+							    <div *ngFor="let skill of user.skills">
+							    	<div *ngIf="skill.type=='tool'">
+										<p class="text-capitalize">{{skill.name}}</p>
+										<span title="{{skill.level}}/10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" [ngStyle]="setWidth(skill.level)">
+												{{skill.level}}/10
+												</div>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="small-separator"></div>
+							<a data-toggle="collapse" href="#collapseMethodologies" aria-expanded="true" aria-controls="collapseMethodologies">
+								<h3 class="experience-kind"><ul><li>Methodologies</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapseMethodologies">
+								<div class="small-separator"></div>
+							    <div *ngFor="let skill of user.skills">
+							    	<div *ngIf="skill.type=='methodology'">
+										<p class="text-capitalize">{{skill.name}}</p>
+										<span title="{{skill.level}}/10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" [ngStyle]="setWidth(skill.level)">
+												{{skill.level}}/10
+												</div>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="small-separator"></div>
+							<a data-toggle="collapse" href="#collapseOperatingSystems" aria-expanded="true" aria-controls="collapseOperatingSystems">
+								<h3 class="experience-kind"><ul><li>Operating Systems</li></ul></h3>
+							</a>
+							<div class="collapse in" id="collapseOperatingSystems">
+								<div class="small-separator"></div>
+							    <div *ngFor="let skill of user.skills">
+							    	<div *ngIf="skill.type=='os'">
+										<p class="text-capitalize">{{skill.name}}</p>
+										<span title="{{skill.level}}/10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" [ngStyle]="setWidth(skill.level)">
+												{{skill.level}}/10
+												</div>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a data-toggle="collapse" class="btn btn-primary" role="button" href="#collapseTrainings" aria-expanded="true" aria-controls="collapseTrainings">
+							<h3>My trainings</h3>
+						</a>
+					</div>
+					<div class="panel-body">
+						<div class="collapse in" id="collapseTrainings">
+						    <div *ngFor="let training of user.trainings">
+								<p><strong>{{training.year}}</strong> - {{training.title}} - {{training.place}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a data-toggle="collapse" class="btn btn-primary" role="button" href="#collapseMyLanguages" aria-expanded="true" aria-controls="collapseMyLanguages">
+							<h3>My languages</h3>
+						</a>
+					</div>
+					<div class="panel-body">
+						<div class="collapse in" id="collapseMyLanguages">
+						    <div *ngFor="let language of user.languages">
+								<p class="text-capitalize">{{language.name}}</p>
+								<span title="{{language.level}}/10">
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" [ngStyle]="setWidth(language.level)">
+										{{language.level}}/10
+										</div>
+									</div>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
